@@ -20,8 +20,10 @@ app.init = function () {
 
     //load current page
     app.load();
-};
 
+    //set active menu
+    app.setActiveMenu();
+};
 
 app.load = function () {
     var router = window.location.hash.trim();
@@ -43,3 +45,22 @@ app.load = function () {
     });
 };
 
+if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+        position = position || 0;
+        return this.indexOf(searchString, position) === position;
+    };
+}
+
+app.setActiveMenu = function () {
+    var router = window.location.hash.trim();
+    if (router.startsWith('#order')) {
+        $('#menu-navbar li:eq(1)').addClass('active');
+    } else if (router.startsWith('#news')) {
+        $('#menu-navbar li:eq(2)').addClass('active');
+    } else if (router.startsWith('#site/setting')) {
+        $('#menu-navbar li:eq(3)').addClass('active');
+    } else {
+        $('#menu-navbar li:eq(0)').addClass('active');
+    }
+};
