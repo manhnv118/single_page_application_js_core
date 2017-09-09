@@ -7,10 +7,10 @@ Ngôn ngữ/libary sử dụng :
 
 Một webpage đơn giản, có các menu với link sau :
 
--   Dashboard : <a href="#site/dashboard"> Dashboard </a>
--   Orders : <a href="#order"> Orders </a>
--   News : <a href="#news"> News </a>
--   Setting : <a href="#site/setting"> Setting </a>
+-   Dashboard : `<a href="#site/dashboard"> Dashboard </a>`
+-   Orders : `<a href="#order"> Orders </a>`
+-   News : `<a href="#news"> News </a>`
+-   Setting : `<a href="#site/setting"> Setting </a>`
 
 Một vùng div có id `page-wrapper` hiển thị nội dung thay đổi của các page.
 
